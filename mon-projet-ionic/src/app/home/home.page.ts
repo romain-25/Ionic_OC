@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { AppareilsPage } from '../appareils/appareils.page';
+
+
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public navCtrl: NavController) {}
+
+  onGoToAppareils() {
+    this.navCtrl.push(AppareilsPage);
+  }
 
 }
